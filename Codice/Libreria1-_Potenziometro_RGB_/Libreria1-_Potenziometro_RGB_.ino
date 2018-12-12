@@ -1,5 +1,3 @@
-int sensorValue=0;
-
 int redPin=0; //P0
 int greenPin=1; //P1
 int bluePin=3; //P3
@@ -17,10 +15,17 @@ bool blue = LOW;
 
  void loop()
  {
-  sensorValue = analogRead(1); // Which corresponds to P2
-  int risultato = map(sensorValue, 0, 1023, 0, 60);
+  int risultato=analogRead(1); //P2
+
+  getColor(risultato);
   
-  if(risultato >= 0 && risultato <= 10){
+  digitalWrite(redPin, red);
+  digitalWrite(greenPin, green);
+  digitalWrite(bluePin, blue);
+}
+void getColor(int risultato){
+  risultato = map(risultato, 0, 1023, 0, 60);
+  if(risultato <= 10){
     red=LOW;
     green=HIGH;
     blue=HIGH;
@@ -45,7 +50,4 @@ bool blue = LOW;
     green=HIGH;
     blue=LOW;
   }
-  digitalWrite(redPin, red);
-  digitalWrite(greenPin, green);
-  digitalWrite(bluePin, blue);
 }
