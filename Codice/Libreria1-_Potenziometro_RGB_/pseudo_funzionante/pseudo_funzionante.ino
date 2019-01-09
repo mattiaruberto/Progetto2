@@ -7,7 +7,7 @@ void setup() {
 
 void loop() {
   int pot=ottieniValorePotenziometro(1,0,255);
-  rappresentaColore(0,pot,1,pot,4,pot); 
+  rappresentaColore(0,pot,1,100,4,pot); 
 }
 void rappresentaColore(int portaRosso,int valoreRosso,int portaVerde,int valoreVerde,int portaBlu,int valoreBlu){
   analogWrite(portaRosso,valoreRosso);
