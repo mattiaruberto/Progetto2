@@ -14,9 +14,15 @@ void loop() {
   
   if(valorePotenziometro < 256){
     libreriaFF.setRed(valorePotenziometro);
+    libreriaFF.setGreen(0);
+    libreriaFF.setBlue(0);
   }else if(valorePotenziometro < 511){
+    libreriaFF.setRed(0);
     libreriaFF.setGreen(valorePotenziometro-255);
-  }else{
-    libreriaFF.setBlue(valorePotenziometro-765);
+    libreriaFF.setBlue(0);
+  }else {
+    libreriaFF.setRed(0);
+    libreriaFF.setGreen(0);
+    libreriaFF.setBlue(valorePotenziometro-510);
   }
 }
