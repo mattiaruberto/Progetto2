@@ -1,0 +1,6 @@
+1) quando clicchi il bottone, il led si accende e quando lo molli si spegne;
+2) quando clicchi il bottone il led si accende, e rimane acceso fino a quando non viene premuto nuovamente;
+3) 1° click lampeggia con delay di 1000 [ms]
+   2° click lampeggia con delay di 500 [ms]
+   3° click rimane acceso
+   4° click si spegne e riavvia il ciclo
