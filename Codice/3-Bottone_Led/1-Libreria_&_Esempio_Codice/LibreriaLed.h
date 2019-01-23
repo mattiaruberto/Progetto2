@@ -7,7 +7,9 @@ class LibreriaLed {
 	private:
 		int led;
 		int state_led;
-		bool lastButtonState;
+		int buttonState;
+		int lastButtonState = LOW;
+
 		unsigned long lastDebounceTime = 0;
 		unsigned long debounceDelay = 50;
 	public:
