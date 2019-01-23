@@ -33,17 +33,18 @@ void LibreriaLed::blink(int frequency)
 };
 
 void LibreriaLed::toggle(bool stato_Bot) {
-	if (stato_Bot != lastButtonState) {
+	int reading = stato_Bot;
+	if (reading != lastButtonState) {
 		lastDebounceTime = millis();
 	}
 	if ((millis() - lastDebounceTime) > debounceDelay) {
-		if (stato_Bot != buttonState) {
+		if (reading != buttonState) {
 			buttonState = reading;
 			if (buttonState == HIGH) {
-				ledState = !ledState;
+				state_led = !state_led;
 			}
 		}
 	}
-	digitalWrite(ledPin, ledState);
+	digitalWrite(led, state_led);
 	lastButtonState = reading;
 }
