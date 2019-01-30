@@ -1,9 +1,9 @@
-#ifndef LibreriaButton_h
-#define LibreriaButton_h
+#ifndef LibraryButton_h
+#define LibraryButton_h
 // definiamo la libreria e includiamo la libreria Arduino.h
 
 #include "Arduino.h"
-class LibreriaButton {
+class LibraryButton {
 	private:
 		int button;
 		int state_button;

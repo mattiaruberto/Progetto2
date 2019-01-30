@@ -1,21 +1,21 @@
-#include <LibreriaButton.h>
+#include <LibraryLed.h>
 
-#include <LibreriaLed.h>
+#include <LibraryButton.h>
 
-LibreriaLed libreriaLed;
+LibraryLed libraryLed;
 
-LibreriaButton libreriaButton;
+LibraryButton libraryButton;
 
 void setup() {
-  libreriaLed.setLedPin(1);
-  libreriaButton.setButtonPin(0);
+  libraryLed.setLedPin(1);
+  libraryButton.setButtonPin(0);
 }
 
 void loop() {
-  boolean stato_bot = libreriaButton.getStateButton();
+  boolean stato_bot = libraryButton.getStateButton();
   if (stato_bot == HIGH) {
-    libreriaLed.blink(600);
+    libraryLed.blink(600);
   } else {
-    libreriaLed.powerOff();
+    libraryLed.powerOff();
   }
 }

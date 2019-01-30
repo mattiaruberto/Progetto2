@@ -1,15 +1,15 @@
 #include "Arduino.h"
-#include "LibreriaFF.h"
+#include "LibraryLedRGB.h"
 
 
-void LibreriaFF::setLedPin(int myRedPin, int myGreenPin, int myBluePin)
+void LibraryLedRGB::setLedPin(int myRedPin, int myGreenPin, int myBluePin)
 {
 	pinRed = myRedPin;
 	pinGreen = myGreenPin;
 	pinBlue = myBluePin;
 };
 
-void LibreriaFF::setColor(int red, int green, int blue)
+void LibraryLedRGB::setColor(int red, int green, int blue)
 {
 	red = 255 - red;
 	green = 255 - green;
@@ -20,19 +20,19 @@ void LibreriaFF::setColor(int red, int green, int blue)
 	analogWrite(pinBlue, blue);
 };
 
-void LibreriaFF::setRed(int red)
+void LibraryLedRGB::setRed(int red)
 {
 	red = 255 - red;
 	analogWrite(pinRed, red);
 };
 
-void LibreriaFF::setGreen(int green)
+void LibraryLedRGB::setGreen(int green)
 {
 	green = 255 - green;
 	analogWrite(pinGreen, green);
 };
 
-void LibreriaFF::setBlue(int blue)
+void LibraryLedRGB::setBlue(int blue)
 {
 	blue = 255 - blue;
 	analogWrite(pinBlue, blue);

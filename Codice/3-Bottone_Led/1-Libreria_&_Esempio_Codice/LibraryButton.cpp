@@ -1,14 +1,14 @@
 #include "Arduino.h"
-#include "LibreriaButton.h"
+#include "LibraryButton.h"
 
 
-void LibreriaButton::setButtonPin(int buttonPort)
+void LibraryButton::setButtonPin(int buttonPort)
 {
 	button = buttonPort;
 	pinMode(button, INPUT);
 };
 
-boolean LibreriaButton::getStateButton()
+boolean LibraryButton::getStateButton()
 {
 	state_button = digitalRead(button);
 	return state_button;

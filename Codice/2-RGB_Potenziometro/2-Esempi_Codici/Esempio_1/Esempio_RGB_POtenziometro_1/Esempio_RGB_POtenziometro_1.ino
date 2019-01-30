@@ -1,28 +1,33 @@
-#include <LibreriaFF.h>
+#include <LibraryLedRGB.h>
 
-LibreriaFF libreriaFF;
+#include <LibraryPotentiometer.h>
 
-int valorePotenziometro;
+
+LibraryPotentiometer libraryPotentiometer;
+LibraryLedRGB libraryLedRGB;
+
+int valuePotentiometer;
+int rangeValuePotentiometer;
 
 void setup() {
-  libreriaFF.setLedPin(0,1,4);
+  libraryLedRGB.setLedPin(0,1,4);
 }
 
 void loop() {
-  int risultato=analogRead(1); //P2
-  valorePotenziometro = map(risultato, 0, 1023, 0, 6);
+  valuePotentiometer = libraryPotentiometer.getValue(1);
+  rangeValuePotentiometer = libraryPotentiometer.setRange(valuePotentiometer, 0, 1023, 1, 6);
   
-  if(valorePotenziometro <= 1){
-    libreriaFF.setColor(255,0,0);
-  }else if(valorePotenziometro > 1 && valorePotenziometro <= 2){
-    libreriaFF.setColor(255,255,0);
-  }else if(valorePotenziometro > 2 && valorePotenziometro <= 3){
-    libreriaFF.setColor(0,255,0);
-  }else if(valorePotenziometro > 3 && valorePotenziometro <= 4){
-    libreriaFF.setColor(0,255,255);
-  }else if(valorePotenziometro > 4 && valorePotenziometro <= 5){
-    libreriaFF.setColor(0,0,255);
-  }else if(valorePotenziometro > 5 && valorePotenziometro <= 6){
-    libreriaFF.setColor(255,0,255);
+  if(rangeValuePotentiometer > 0 && rangeValuePotentiometer <= 1){
+    libraryLedRGB.setColor(255,0,0);
+  }else if(rangeValuePotentiometer > 1 && rangeValuePotentiometer <= 2){
+    libraryLedRGB.setColor(255,255,0);
+  }else if(rangeValuePotentiometer > 2 && rangeValuePotentiometer <= 3){
+    libraryLedRGB.setColor(0,255,0);
+  }else if(rangeValuePotentiometer > 3 && rangeValuePotentiometer <= 4){
+    libraryLedRGB.setColor(0,255,255);
+  }else if(rangeValuePotentiometer > 4 && rangeValuePotentiometer <= 5){
+    libraryLedRGB.setColor(0,0,255);
+  }else if(rangeValuePotentiometer > 5 && rangeValuePotentiometer <= 6){
+    libraryLedRGB.setColor(255,0,255);
   }
 }

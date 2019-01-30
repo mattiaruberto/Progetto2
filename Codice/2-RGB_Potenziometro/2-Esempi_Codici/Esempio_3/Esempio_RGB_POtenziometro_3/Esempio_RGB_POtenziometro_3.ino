@@ -1,25 +1,30 @@
-#include <LibreriaFF.h>
+#include <LibraryLedRGB.h>
 
-LibreriaFF libreriaFF;
+#include <LibraryPotentiometer.h>
 
-int valorePotenziometro;
+LibraryLedRGB libraryLedRGB;
+LibraryPotentiometer libraryPotentiometer;
+
+int valuePotentiometer;
+int rangeValuePotentiometer;
 
 int counter = 0;
 
 bool ceck = true;
 
 void setup() {
-  libreriaFF.setLedPin(0,1,4);
+  libraryLedRGB.setLedPin(0,1,4);
 }
 
 void loop() {
-  int risultato=analogRead(1); //P2
-  valorePotenziometro = map(risultato, 0, 1023, 0, 255);
-  if(valorePotenziometro > 50){
+  valuePotentiometer = libraryPotentiometer.getValue(1);
+  rangeValuePotentiometer = libraryPotentiometer.setRange(valuePotentiometer, 0, 1023, 1, 6);
+  
+  if(rangeValuePotentiometer > 50){
     ceck = true;
   }
   if(ceck){
-    if(valorePotenziometro < 30){
+    if(rangeValuePotentiometer < 30){
       counter++;
       if(counter == 3){
         counter = 0;
@@ -28,10 +33,10 @@ void loop() {
     }
   }
   if(counter == 0){
-    libreriaFF.setColor(valorePotenziometro,0,0);
+    libraryLedRGB.setColor(rangeValuePotentiometer,0,0);
   }else if(counter == 1){
-    libreriaFF.setColor(0,valorePotenziometro,0);
+    libraryLedRGB.setColor(0,rangeValuePotentiometer,0);
   }else if(counter == 2){
-    libreriaFF.setColor(0,0,valorePotenziometro);
+    libraryLedRGB.setColor(0,0,rangeValuePotentiometer);
   }
 }

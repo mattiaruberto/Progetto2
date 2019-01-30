@@ -1,9 +1,9 @@
-#ifndef LibreriaFF_h
-#define LibreriaFF_h
+#ifndef LibraryLedRGB_h
+#define LibraryLedRGB_h
 // definiamo la libreria e includiamo la libreria Arduino.h
 
 #include "Arduino.h"
-class LibreriaFF {
+class LibraryLedRGB {
 	private:
 		int pinRed;
 		int pinGreen;
