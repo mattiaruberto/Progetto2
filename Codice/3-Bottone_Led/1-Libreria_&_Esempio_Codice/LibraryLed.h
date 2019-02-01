@@ -7,17 +7,11 @@ class LibraryLed {
 	private:
 		int led;
 		boolean state_led;
-		int buttonState;
-		int lastButtonState = LOW;
-
-		unsigned long lastDebounceTime = 0;
-		unsigned long debounceDelay = 50;
 	public:
 		void setLedPin(int ledPort);
 		void powerOn();
 		void powerOff();
 		void setLed(bool stato_led);
 		void blink(int frequency);
-		boolean toggle(bool stato_Bot);
 };
 #endif

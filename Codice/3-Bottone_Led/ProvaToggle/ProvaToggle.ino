@@ -1,18 +1,36 @@
-boolean statoLed=false;
-boolean newStatoBottone=false;
-boolean oldStatoBottone=false;
+const int buttonPin = 0;  
+const int ledPin = 1;   
+
+int ledState = HIGH;         
+int state_button;             
+int lastButtonState = LOW;   
+
+unsigned long lastDebounceTime = 0;  
+unsigned long debounceDelay = 50;    
+
 void setup() {
-  // put your setup code here, to run once:
-  pinMode(0,INPUT);
-  pinMode(1,OUTPUT);
+  pinMode(buttonPin, INPUT);
+  pinMode(ledPin, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  if(digitalRead(0) && newStatoBottone){
-    statoLed=!statoLed;
-    oldStatoBottone=newStatoBottone;
-    delay(200);
+  ledState = toggle();
+  digitalWrite(ledPin, ledState);
+}
+
+bool toggle(){
+  int reading = digitalRead(buttonPin);
+  if (reading != lastButtonState) {
+    lastDebounceTime = millis();
   }
-  digitalWrite(1,statoLed);
+  if ((millis() - lastDebounceTime) > debounceDelay) {
+    if (reading != state_button) {
+      state_button = reading;
+      if (state_button == HIGH) {
+        ledState = !ledState;
+      }
+    }
+  }
+  lastButtonState = reading;
+  return ledState;
 }

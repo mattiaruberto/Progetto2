@@ -6,7 +6,6 @@ LibraryLed libraryLed;
 
 LibraryButton libraryButton;
 
-boolean stato_led;
 
 void setup() {
   libraryLed.setLedPin(1);
@@ -14,6 +13,9 @@ void setup() {
 }
 
 void loop() {
-  stato_led = libraryButton.toggle();
+  boolean stato_bot = libraryButton.getStateButton();
+  
+  bool stato_led = libraryLed.toggle(stato_bot);
+
   libraryLed.setLed(stato_led);
 }

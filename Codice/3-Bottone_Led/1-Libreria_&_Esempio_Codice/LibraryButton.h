@@ -6,9 +6,14 @@
 class LibraryButton {
 	private:
 		int button;
-		int state_button;
+		boolean state_button;
+		boolean lastButtonState = LOW;
+		unsigned long lastDebounceTime = 0;
+		unsigned long debounceDelay = 50;
+		boolean ledState = HIGH;
 	public:
 		void setButtonPin(int buttonPort);
 		boolean getStateButton();
+		boolean toggle();
 };
 #endif
