@@ -31,21 +31,3 @@ void LibraryLed::blink(int frequency)
 	digitalWrite(led, state_led);
 	delay(frequency);
 };
-
-boolean LibraryLed::toggle(bool stato_Bot) {
-	int reading = stato_Bot;
-	if (reading != lastButtonState) {
-		lastDebounceTime = millis();
-	}
-	if ((millis() - lastDebounceTime) > debounceDelay) {
-		if (reading != buttonState) {
-			buttonState = reading;
-			if (buttonState == HIGH) {
-				state_led = !state_led;
-			}
-		}
-	}
-	//digitalWrite(led, state_led);
-	lastButtonState = reading;
-	return state_led;
-}
