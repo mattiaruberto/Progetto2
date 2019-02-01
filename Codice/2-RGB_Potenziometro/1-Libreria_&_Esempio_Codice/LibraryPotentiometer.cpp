@@ -1,7 +1,7 @@
 #include "Arduino.h"
 #include "LibraryPotentiometer.h"
 
-int LibraryPotentiometer::setRange(int valuePotentiometer, int valueMinPotentiometer, int valueMaxPotentiometer, int valueMin, int valueMax) {
+int LibraryPotentiometer::getMappedValue(int valuePotentiometer, int valueMinPotentiometer, int valueMaxPotentiometer, int valueMin, int valueMax) {
 	int valorePotenziometro = map(valuePotentiometer, valueMinPotentiometer, valueMaxPotentiometer, valueMin, valueMax);
 	return valorePotenziometro;
 }
