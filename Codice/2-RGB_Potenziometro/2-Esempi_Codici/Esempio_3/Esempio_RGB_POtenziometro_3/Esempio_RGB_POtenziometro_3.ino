@@ -18,13 +18,12 @@ void setup() {
 
 void loop() {
   valuePotentiometer = libraryPotentiometer.getValue(1);
-  rangeValuePotentiometer = libraryPotentiometer.setRange(valuePotentiometer, 0, 1023, 1, 6);
   
-  if(rangeValuePotentiometer > 50){
+  if(valuePotentiometer > 50){
     ceck = true;
   }
   if(ceck){
-    if(rangeValuePotentiometer < 30){
+    if(valuePotentiometer < 30){
       counter++;
       if(counter == 3){
         counter = 0;
@@ -33,10 +32,10 @@ void loop() {
     }
   }
   if(counter == 0){
-    libraryLedRGB.setColor(rangeValuePotentiometer,0,0);
+    libraryLedRGB.setColor(valuePotentiometer,0,0);
   }else if(counter == 1){
-    libraryLedRGB.setColor(0,rangeValuePotentiometer,0);
+    libraryLedRGB.setColor(0,valuePotentiometer,0);
   }else if(counter == 2){
-    libraryLedRGB.setColor(0,0,rangeValuePotentiometer);
+    libraryLedRGB.setColor(0,0,valuePotentiometer);
   }
 }
