@@ -15,7 +15,7 @@ void setup() {
 
 void loop() {
   valuePotentiometer = libraryPotentiometer.getValue(1);
-  rangeValuePotentiometer = libraryPotentiometer.setRange(valuePotentiometer, 0, 1023, 1, 6);
+  rangeValuePotentiometer = libraryPotentiometer.getMappedValue(valuePotentiometer, 0, 1023, 1, 6);
   
   if(rangeValuePotentiometer < 256){
     libraryLedRGB.setRed(rangeValuePotentiometer);

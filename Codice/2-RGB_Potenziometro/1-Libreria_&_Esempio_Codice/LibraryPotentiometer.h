@@ -5,7 +5,7 @@
 #include "Arduino.h"
 class LibraryPotentiometer {
 	public:
-		int setRange(int valuePotentiometer, int valueMinPotentiometer, int valueMaxPotentiometer, int valueMin, int valueMax);
+		int getMappedValue(int valuePotentiometer, int valueMinPotentiometer, int valueMaxPotentiometer, int valueMin, int valueMax);
 		int getValue(int port);
 };
 

@@ -18,7 +18,11 @@ void setup() {
 
 void loop() {
   valuePotentiometer = libraryPotentiometer.getValue(1);
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 9fdcacacf5d34ccf00264cc78dc9660414f88726
   if(valuePotentiometer > 50){
     ceck = true;
   }
