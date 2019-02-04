@@ -1,7 +1,11 @@
 #include "Arduino.h"
 #include "LibraryUltraSound.h"
 
-
+/**
+* Metodo che setta le porte dei due pin del sensore ultrasuoni.
+* pinTrigPort Attributo che rappresenta la porta del pin trig del sensore ultra suoni.
+* pinEchoPort Attributo che rappresenta la porta del pin echo del sensore ultra suoni.
+*/
 void LibraryUltraSound::setUltraSoundPin(int pinTrigPort, int pinEchoPort)
 {
 	pin_trig = pinTrigPort;
@@ -9,7 +13,9 @@ void LibraryUltraSound::setUltraSoundPin(int pinTrigPort, int pinEchoPort)
 	pinMode(pin_trig, OUTPUT);
 	pinMode(pin_echo, INPUT);
 };
-
+/**
+* Metodo che ritorna la distanza misurata dal sensore ultra suoni in cm.
+*/
 int LibraryUltraSound::getDistance()
 {
 	digitalWrite(pin_trig, LOW);
