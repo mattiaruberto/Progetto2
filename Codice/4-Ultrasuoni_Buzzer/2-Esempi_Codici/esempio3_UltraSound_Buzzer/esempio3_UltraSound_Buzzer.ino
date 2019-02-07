@@ -6,8 +6,6 @@
 LibraryUltraSound libraryUltraSound;
 //Istanziamo l'oggetto del buzzer
 LibraryBuzzer libraryBuzzer;
-//Istanziamo la variabile distance per memorizzare la distanza ritornata dell'ultrasuonui
-int distance;
 
 void setup() {
   //settiamo le varie uscite ed entrate
