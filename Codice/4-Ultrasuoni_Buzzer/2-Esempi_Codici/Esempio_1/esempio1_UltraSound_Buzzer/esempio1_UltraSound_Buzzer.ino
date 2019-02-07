@@ -1,12 +1,11 @@
-//Includiamo la libreria dell'ultrasuoni
 #include <LibraryUltraSound.h>
-//Includiamo la libreria del buzzer
+
 #include <LibraryBuzzer.h>
-//Istanziamo l'ogetto dell'ultrasuoni
+
 LibraryUltraSound libraryUltraSound;
-//Istanziamo l'oggetto del buzzer
 LibraryBuzzer libraryBuzzer;
 
+int distance;
 
 void setup() {
   //settiamo le varie uscite ed entrate

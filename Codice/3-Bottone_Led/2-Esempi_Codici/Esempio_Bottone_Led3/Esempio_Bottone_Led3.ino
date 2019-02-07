@@ -18,7 +18,7 @@ void loop() {
   boolean stato_bot = libraryButton.getStateButton();
   /**
    * Controlliamo se il bottone è schiacciato
-   * Se si accendiamo il led per 700ms
+   * Se si accendiamo il led per 1000ms
    * Se il bottone è ancora schiacciato il led incomincerà a lampeggiare per 1500ms con una frequenza di 20
    * Altrimenti spegnamo il led
    */
