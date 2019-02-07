@@ -36,7 +36,7 @@
         </taskproperties>
         <task id="0" name="Progetto 2" meeting="false" start="2018-11-14" duration="63" complete="0" expand="true">
             <task id="1" name="Documentazione" color="#8cb6ce" meeting="false" start="2018-11-14" duration="63" complete="0" thirdDate="2018-11-21" thirdDate-constraint="0" expand="true"/>
-            <task id="169" name="Presentazione" color="#8cb6ce" meeting="false" start="2019-02-01" duration="6" complete="0" thirdDate="2018-11-12" thirdDate-constraint="0" expand="true"/>
+            <task id="169" name="Presentazione" color="#8cb6ce" meeting="false" start="2019-02-06" duration="3" complete="0" thirdDate="2018-11-12" thirdDate-constraint="0" expand="true"/>
             <task id="2" name="Intervista al committente" color="#8cb6ce" meeting="false" start="2018-11-16" duration="1" complete="0" thirdDate="2018-11-13" thirdDate-constraint="0" expand="true">
                 <depend id="6" type="2" difference="2" hardness="Strong"/>
             </task>
@@ -76,7 +76,7 @@
                     <task id="233" name="Hardware" color="#8cb6ce" meeting="false" start="2019-01-30" duration="1" complete="0" thirdDate="2018-11-28" thirdDate-constraint="0" expand="true"/>
                     <task id="235" name="Software" color="#8cb6ce" meeting="false" start="2019-01-30" duration="6" complete="0" thirdDate="2018-11-28" thirdDate-constraint="0" expand="true"/>
                     <task id="237" name="Stesura libreria" color="#8cb6ce" meeting="false" start="2019-02-01" duration="4" complete="0" thirdDate="2018-11-28" thirdDate-constraint="0" expand="true"/>
-                    <task id="239" name="Stesura Guida" color="#8cb6ce" meeting="false" start="2019-01-30" duration="6" complete="0" thirdDate="2018-11-28" thirdDate-constraint="0" expand="true"/>
+                    <task id="239" name="Stesura Guida" color="#8cb6ce" meeting="false" start="2019-02-01" duration="4" complete="0" thirdDate="2018-11-28" thirdDate-constraint="0" expand="true"/>
                 </task>
             </task>
             <task id="170" name="Fine Progetto" color="#8cb6ce" meeting="true" start="2019-02-08" duration="0" complete="0" thirdDate="2018-11-12" thirdDate-constraint="0" expand="true"/>
