@@ -1,0 +1,7 @@
+https://digistump.com/wiki/digispark/tutorials/debugging?s[]=serial&s[]=monitor
+http://tuxamito.com/wiki/index.php/File:Digispark_with_pinout.jpg#filelinks
+https://www.critics-corporation.com/RaspberryPi/come-scrivere-e-creare-una-libreria-per-arduino
+https://it.emcelettronica.com/come-scrivere-libreria-arduino
+https://forum.arduino.cc/index.php?topic=126156.0
+https://www.swzone.it/Arduino--come-creare-e-gestire-una-libreria---43873.html
+
